@@ -1,0 +1,19 @@
+.header {
+    padding: 30px 0;
+    background-color: $black;
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1230px;
+        height: 60px;
+    }
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        width: 56%;
+    }
+    &__link {
+        @include font(700, 18px, $white) 
+    }
+}
