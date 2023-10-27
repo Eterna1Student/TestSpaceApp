@@ -1,27 +1,27 @@
 @font-face {
     font-family: 'PFAgoraSansPro';
-    src: url('../fonts/PFAgoraSansPro-Regular.ttf') format('ttf');
+    src: url('../fonts/PFAgoraSansPro-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'PFAgoraSansPro';
-    src: url('../fonts/PFAgoraSansPro-Medium.ttf') format('ttf');
+    src: url('../fonts/PFAgoraSansPro-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'PFAgoraSansPro';
-    src: url('../fonts/PFAgoraSansPro-Bold.ttf') format('ttf');
+    src: url('../fonts/PFAgoraSansPro-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'PFAgoraSansPro';
-    src: url('../fonts/PFAgoraSansPro-Black.ttf') format('ttf');
+    src: url('../fonts/PFAgoraSansPro-Black.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
 }
@@ -46,6 +46,10 @@ $white: #fff;
 a {
     text-decoration: none;
     font-family: 'PFAgoraSansPro', 'sans-serif';
+}
+
+li {
+    list-style-type: none;
 }
 
 .container {
