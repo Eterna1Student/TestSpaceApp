@@ -58,3 +58,14 @@ li {
     margin: 0 auto;
 }
 
+.btn {
+    width: 320px;
+    height: 60px;
+    @include font(700, 18px, $white);
+    line-height: 24px;
+    background: $red;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
