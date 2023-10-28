@@ -1,14 +1,14 @@
 .main {
-    width: 100%;
-    position: relative;
-    top: -120px;
     background-image: url(../images/heroBG.png);
-    background-size: contain;
+    background-size: 100vw 90vh;
     background-repeat: no-repeat;
     .hero {
+        max-width: 1300px;
+        height: 89vh;
         text-align: center;
-        padding: 150px 0 200px;
+        padding: 30px 5% 200px 0;
         &__logo {
+            width: 100%;
             margin-bottom: 80px;
         }
 
@@ -18,13 +18,14 @@
         }
         
         &__blocks {
-            display: flex;
-            justify-content: space-between;
-            gap: 30px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 3fr 1fr 1fr 1fr;
+            gap: 2.3%;
         }
         &__block {
-            width: 180px;
-            height: 175px;
+            max-width: 100%;
+            height: 50%;
             padding: 25px 0 20px;
             background: rgba(196, 196, 196, 0.20);
             border: 2px solid rgba(100, 100, 100, 0.33);
@@ -46,7 +47,6 @@
             width: 100%;
             height: 325px;
             text-align: start;
-            width: 600px;
             padding: 25px 25px 54px;
             border: 2px solid rgba(100, 100, 100, 0.33);
             background-image: url(../images/boxBG.png);
@@ -71,8 +71,8 @@
         }
     }
     .btn-chart {
-        margin: 80px 0 0 26%;
-        width: 50%;
+        margin: 80px 0 0 16%;
+        width: 70%;
     }
 }
 
@@ -91,9 +91,13 @@
     }
 }
 
+.wrapper_slid {
+    padding-left: 6.5%;
+}
+
 
 .swiper {
-    max-width: 1222px;
+    max-width: 1300px;
     padding-left: 88px;
     height: 800px;
     .columns {
@@ -184,4 +188,14 @@
 
 #my-chart {
     width: 100% !important;
+}
+
+
+
+@media (max-width: 1200px) {
+
+    .hero__blocks {
+
+    }
+    
 }

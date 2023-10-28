@@ -45,7 +45,7 @@ li {
 }
 
 .btn {
-  width: 320px;
+  width: 24%;
   height: 60px;
   font-weight: 700;
   font-size: 18px;
@@ -61,11 +61,13 @@ li {
   padding: 30px 0;
   position: relative;
   z-index: 2;
+  background: #090909;
 }
 .header__wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-right: 5%;
 }
 .header__menu {
   display: flex;
@@ -77,20 +79,23 @@ li {
   font-size: 18px;
   color: #fff;
 }
+.header__link:not(:last-child) {
+  margin-right: 20px;
+}
 
 .main {
-  width: 100%;
-  position: relative;
-  top: -120px;
   background-image: url(../images/heroBG.png);
-  background-size: contain;
+  background-size: 100vw 90vh;
   background-repeat: no-repeat;
 }
 .main .hero {
+  max-width: 1300px;
+  height: 89vh;
   text-align: center;
-  padding: 150px 0 200px;
+  padding: 30px 5% 200px 0;
 }
 .main .hero__logo {
+  width: 100%;
   margin-bottom: 80px;
 }
 .main .hero__title {
@@ -100,13 +105,14 @@ li {
   color: #fff;
 }
 .main .hero__blocks {
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr;
+  gap: 2.3%;
 }
 .main .hero__block {
-  width: 180px;
-  height: 175px;
+  max-width: 100%;
+  height: 50%;
   padding: 25px 0 20px;
   background: rgba(196, 196, 196, 0.2);
   border: 2px solid rgba(100, 100, 100, 0.33);
@@ -129,7 +135,6 @@ li {
   width: 100%;
   height: 325px;
   text-align: start;
-  width: 600px;
   padding: 25px 25px 54px;
   border: 2px solid rgba(100, 100, 100, 0.33);
   background-image: url(../images/boxBG.png);
@@ -154,8 +159,8 @@ li {
   transform: translate(45px, 40px);
 }
 .chart-content .btn-chart {
-  margin: 80px 0 0 26%;
-  width: 50%;
+  margin: 80px 0 0 16%;
+  width: 70%;
 }
 
 .wrapper {
@@ -174,8 +179,12 @@ li {
   color: #141515;
 }
 
+.wrapper_slid {
+  padding-left: 6.5%;
+}
+
 .swiper {
-  max-width: 1222px;
+  max-width: 1300px;
   padding-left: 88px;
   height: 800px;
 }
