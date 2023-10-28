@@ -3,12 +3,16 @@
     position: relative;
     z-index: 2;
     background: #090909;
-    
+
     &__wrap {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding-right: 5%;
+    }
+
+    &__wrap-mobile {
+        display: none;
     }
 
     &__menu {
@@ -18,9 +22,52 @@
     }
 
     &__link {
-        @include font(700, 18px, $white) 
+        @include font(700, 18px, $white);
+        transition: all ease .3s; 
     }
     &__link:not(:last-child) {
         margin-right: 20px;
-    }    
+    }
+    &__link:hover {
+         opacity: 0.6;
+    }
+    .btn_modal {
+        margin-left: 10px;
+    } 
+    #btn_burger {
+        display: none;
+        position: relative;
+        right: 0;
+        top: 0;
+        padding: 20px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }   
+}
+
+@media screen and (max-width: 768px) {
+
+    .header__wrap-mobile {            //burger
+        display: none;
+    }
+    .header__menu {
+        display: none;
+    }
+
+    #btn_burger {
+        display: block !important;
+    }
+
+    .header__menu_burger {
+        display: block;
+        width: 28%;
+        margin-left: 37%;
+        text-align: center;
+    }
+
+    .header__link {
+        display: block;
+        margin: 0 0 15px 0 !important;
+    }
 }

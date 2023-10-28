@@ -18,18 +18,23 @@
         }
         
         &__blocks {
+            display: flex;
             width: 100%;
-            display: grid;
-            grid-template-columns: 3fr 1fr 1fr 1fr;
-            gap: 2.3%;
+            height: 57%;
+            gap: 30px;
         }
+
         &__block {
-            max-width: 100%;
-            height: 50%;
+            width: 180px;
+            height: 167px;
             padding: 25px 0 20px;
             background: rgba(196, 196, 196, 0.20);
-            border: 2px solid rgba(100, 100, 100, 0.33);
+            border: 3px solid rgba(100, 100, 100, 0.33);
             border-radius: 20px;
+            &:hover {
+                border: 2px solid rgba(245, 245, 245, 0.33);
+                cursor: pointer;
+            }
         }
 
         &__block-title {
@@ -44,13 +49,19 @@
         }
 
         &__block_active {
-            width: 100%;
+            width: 600px;
             height: 325px;
             text-align: start;
             padding: 25px 25px 54px;
             border: 2px solid rgba(100, 100, 100, 0.33);
             background-image: url(../images/boxBG.png);
             background-size: cover;
+        }
+        
+        &__block_noActive {
+            display: flex;
+            width: 600px;
+            gap: 30px;            
         }
     }
 }
@@ -98,8 +109,11 @@
 
 .swiper {
     max-width: 1300px;
-    padding-left: 88px;
-    height: 800px;
+    margin-bottom: 160px;
+    height: 900px;
+    background-image: url(../images/swiperBG.svg);
+    background-repeat: no-repeat;
+    background-position: center 100%;
     .columns {
         display: flex;
         justify-content: space-between;
@@ -158,6 +172,8 @@
                 background-repeat: no-repeat;
             } 
             &__row-item {
+                display: flex;
+                align-items: center;
                 height: 40px;
                 @include font(400, 32px, $black);
                 line-height: 100%;
@@ -168,7 +184,6 @@
         }
     }
 }
-
 
 
 .swiper-pagination-bullet {
@@ -186,6 +201,10 @@
     outline: 1px solid $red;
 }
 
+.swiper-pagination {
+    margin-bottom: 60px;
+}
+
 #my-chart {
     width: 100% !important;
 }
@@ -194,8 +213,36 @@
 
 @media (max-width: 1200px) {
 
-    .hero__blocks {
-
+    .hero__logo {
+        margin-bottom: 20px !important;
     }
+    .hero__title {
+        font-weight: 500 !important;
+        font-size: 24px !important;
+        margin-bottom: 15px !important;
+    }
+    .hero__blocks {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px !important;
+    }
+    .list__row-item {
+        font-size: 20px !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
     
+
+
+}
+
+@media screen and (max-width: 576px) {
+
+
+}
+
+@media screen and (max-width: 320px) {
+
+
 }

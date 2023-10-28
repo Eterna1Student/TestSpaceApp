@@ -69,3 +69,13 @@ li {
     cursor: pointer;
 }
 
+.btn:hover {
+    opacity: .8;
+    transition: all ease .3s;
+}
+
+.btn:active {
+    opacity: .5;
+}
+
+ 

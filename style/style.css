@@ -57,6 +57,15 @@ li {
   cursor: pointer;
 }
 
+.btn:hover {
+  opacity: 0.8;
+  transition: all ease 0.3s;
+}
+
+.btn:active {
+  opacity: 0.5;
+}
+
 .header {
   padding: 30px 0;
   position: relative;
@@ -69,6 +78,9 @@ li {
   align-items: center;
   padding-right: 5%;
 }
+.header__wrap-mobile {
+  display: none;
+}
 .header__menu {
   display: flex;
   justify-content: space-between;
@@ -78,11 +90,49 @@ li {
   font-weight: 700;
   font-size: 18px;
   color: #fff;
+  transition: all ease 0.3s;
 }
 .header__link:not(:last-child) {
   margin-right: 20px;
 }
+.header__link:hover {
+  opacity: 0.6;
+}
+.header .btn_modal {
+  margin-left: 10px;
+}
+.header #btn_burger {
+  display: none;
+  position: relative;
+  right: 0;
+  top: 0;
+  padding: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 
+@media screen and (max-width: 768px) {
+  .header__wrap-mobile {
+    display: none;
+  }
+  .header__menu {
+    display: none;
+  }
+  #btn_burger {
+    display: block !important;
+  }
+  .header__menu_burger {
+    display: block;
+    width: 28%;
+    margin-left: 37%;
+    text-align: center;
+  }
+  .header__link {
+    display: block;
+    margin: 0 0 15px 0 !important;
+  }
+}
 .main {
   background-image: url(../images/heroBG.png);
   background-size: 100vw 90vh;
@@ -105,18 +155,22 @@ li {
   color: #fff;
 }
 .main .hero__blocks {
+  display: flex;
   width: 100%;
-  display: grid;
-  grid-template-columns: 3fr 1fr 1fr 1fr;
-  gap: 2.3%;
+  height: 57%;
+  gap: 30px;
 }
 .main .hero__block {
-  max-width: 100%;
-  height: 50%;
+  width: 180px;
+  height: 167px;
   padding: 25px 0 20px;
   background: rgba(196, 196, 196, 0.2);
-  border: 2px solid rgba(100, 100, 100, 0.33);
+  border: 3px solid rgba(100, 100, 100, 0.33);
   border-radius: 20px;
+}
+.main .hero__block:hover {
+  border: 2px solid rgba(245, 245, 245, 0.33);
+  cursor: pointer;
 }
 .main .hero__block-title {
   display: block;
@@ -132,13 +186,18 @@ li {
   line-height: 150%;
 }
 .main .hero__block_active {
-  width: 100%;
+  width: 600px;
   height: 325px;
   text-align: start;
   padding: 25px 25px 54px;
   border: 2px solid rgba(100, 100, 100, 0.33);
   background-image: url(../images/boxBG.png);
   background-size: cover;
+}
+.main .hero__block_noActive {
+  display: flex;
+  width: 600px;
+  gap: 30px;
 }
 
 .chart-content {
@@ -185,8 +244,11 @@ li {
 
 .swiper {
   max-width: 1300px;
-  padding-left: 88px;
-  height: 800px;
+  margin-bottom: 160px;
+  height: 900px;
+  background-image: url(../images/swiperBG.svg);
+  background-repeat: no-repeat;
+  background-position: center 100%;
 }
 .swiper .columns {
   display: flex;
@@ -251,6 +313,8 @@ li {
   background-repeat: no-repeat;
 }
 .swiper .columns .list__row-item {
+  display: flex;
+  align-items: center;
   height: 40px;
   font-weight: 400;
   font-size: 32px;
@@ -277,6 +341,29 @@ li {
   outline: 1px solid #E01E2E;
 }
 
+.swiper-pagination {
+  margin-bottom: 60px;
+}
+
 #my-chart {
   width: 100% !important;
+}
+
+@media (max-width: 1200px) {
+  .hero__logo {
+    margin-bottom: 20px !important;
+  }
+  .hero__title {
+    font-weight: 500 !important;
+    font-size: 24px !important;
+    margin-bottom: 15px !important;
+  }
+  .hero__blocks {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px !important;
+  }
+  .list__row-item {
+    font-size: 20px !important;
+  }
 }/*# sourceMappingURL=style.css.map */
