@@ -13,6 +13,16 @@ let myChart = new Chart(ctx, {
         }],
     },
     options: {
+        scales: {
+            y: {
+                beginAtZero: false,
+                ticks: {
+                    callback: function(value, index, values) {
+                        return value + '%'; 
+                    }
+                }
+            }
+        },
         maintainAspectRatio: true,
         plugins: {
             legend: {
