@@ -16,52 +16,56 @@
             margin-bottom: 80px;
             @include font(900, 64px, $white);
         }
-        
+
         &__blocks {
-            display: flex;
             width: 100%;
-            height: 57%;
+            display: flex;
             gap: 30px;
         }
 
         &__block {
             width: 180px;
             height: 167px;
-            padding: 25px 0 20px;
-            background: rgba(196, 196, 196, 0.20);
-            border: 3px solid rgba(100, 100, 100, 0.33);
+            text-align: center;
+            padding: 2% 0;
             border-radius: 20px;
-            &:hover {
-                border: 2px solid rgba(245, 245, 245, 0.33);
-                cursor: pointer;
+            border: 2px solid rgba(100, 100, 100, 0.33);
+            background: rgba(196, 196, 196, 0.20);
+            backdrop-filter: blur(10px);
+            transition: all ease .3s;
+            &-description {
+                display: none;
             }
+        }
+
+        &__block-active {
+            width: 600px;
+            height: 325px;
+            text-align: left;
+            padding: 25px 25px 54px 25px;
+            border-radius: 20px;
+            border: 2px solid rgba(100, 100, 100, 0.33);
+            background: url(../images/boxBG.png);
+            background-size: cover;
+            background-position: 10%;
+            .hero__block-description {
+                display: block;
+            }
+        }
+
+        &__block-icon {
+            width: 73px;
         }
 
         &__block-title {
             display: block;
-            margin: 25px 0 15px;
+            margin: 25px 0 0;
             @include font(700, 20px, $white);
         }
 
         &__block-description {
+            
             @include font(400, 16px, $white);
-            line-height: 150%;
-        }
-
-        &__block_active {
-            width: 600px;
-            height: 325px;
-            text-align: start;
-            padding: 25px 25px 54px;
-            border: 2px solid rgba(100, 100, 100, 0.33);
-            background-image: url(../images/boxBG.png);
-            background-size: cover;
-        }
-        
-        &__block_noActive {
-            display: flex;
-            width: 600px;
-            gap: 30px;            
         }
     }
 }
@@ -70,6 +74,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 30px;
+    padding-bottom: 40px;
     &__decor {
         width: 100%;
         background-image: url(../images/chartBG.svg);
@@ -218,25 +223,45 @@
 
 @media (max-width: 1200px) {
 
-    .hero__logo {
-        margin-bottom: 20px !important;
-    }
-    .hero__title {
-        font-weight: 500 !important;
-        font-size: 24px !important;
-        margin-bottom: 15px !important;
-    }
-    .hero__blocks {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px !important;
+    .main {
+        .hero {
+            &__blocks {
+                width: 600px;
+                flex-wrap: wrap;
+                margin: 0 auto;
+            }
+            &__logo {
+                margin-bottom: 40px;
+            }
+            &__title {
+                margin-bottom: 40px;
+                font-size: 34px;
+            }
+        }
     }
 }
 
 @media screen and (max-width: 768px) {
     
+    .main {
+        .hero {
+
+    }
+}
 
 
+    .chart-content {
+        grid-template-columns: none;
+        column-gap: 0;
+        grid-template-rows: 1fr 1fr;
+        align-items: center;
+    }
+
+    .swiper {
+        background-position: center 70%;
+        background-size: 67%;
+        margin-bottom: 80px;
+    }
 }
 
 @media screen and (max-width: 576px) {
