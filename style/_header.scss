@@ -25,50 +25,102 @@
         @include font(700, 18px, $white);
         transition: all ease .3s; 
     }
+
     &__link:not(:last-child) {
         margin-right: 20px;
     }
+
     &__link:hover {
          opacity: 0.6;
     }
+
+    &__link:active {
+        opacity: 0.4;
+   }
+
     .btn_modal {
         margin-left: 10px;
-    } 
-    #btn_burger {
-        display: none;
+    }
+
+    .btn-burger {  
+        display: none;   
         position: relative;
         right: 0;
         top: 0;
-        padding: 20px;
-        background: none;
         border: none;
+        background: none;
         cursor: pointer;
+        .btn-burger-item {
+            display: block;
+            margin-bottom: 8px;
+            width: 40px;
+            height: 2px;
+            background: $white;
+            transition: all ease .3s;
+        }
+    }
+
+    .btn-burger_active {
+        .btn-burger-item:first-child {
+            transform: rotate(45deg);
+            transition: all ease .3s;
+        }
+
+        .btn-burger-item:last-child {
+            transform: rotate(-45deg);
+            position: relative;
+            top: -9px;
+            transition: all ease .3s;
+        }
+
+        .btn-burger-item:nth-child(2) {
+            display: none;
+            transition: all ease .3s;
+        }
     }   
 }
 
 @media screen and (max-width: 768px) {
 
-    .header__wrap-mobile {            //burger
-        display: none;
-    }
-    .header__menu {
-        display: none;
-    }
+    .header {
+        &__wrap-mobile {
+            display: none;
+            
+            &_active {
+                display: block;
+            }
+        }
 
-    #btn_burger {
-        display: block !important;
-    }
+        &__menu {
+            display: none;
+        }
 
-    .header__menu_burger {
-        display: block;
-        width: 28%;
-        margin-left: 37%;
-        text-align: center;
-    }
+        &__menu_burger {
+            width: 28%;
+            margin-left: 37%;
+            text-align: center;
+        }
 
-    .header__link {
-        display: block;
-        margin: 0 0 15px 0 !important;
+        &__link {
+            display: block;
+            margin: 0 0 15px 0 !important;
+        }
+
+        &__menu_burger {
+            display: block;
+            width: 28%;
+            margin-left: 37%;
+            text-align: center;
+        }
+    
+        &__link {
+            display: block;
+            margin: 0 0 15px 0 !important;
+        }
+
+        .btn-burger {
+            display: block;
+        }
     }
 }
 

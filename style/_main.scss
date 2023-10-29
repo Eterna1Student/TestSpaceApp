@@ -33,6 +33,10 @@
             background: rgba(196, 196, 196, 0.20);
             backdrop-filter: blur(10px);
             transition: all ease .3s;
+            cursor: pointer;
+            &:hover {
+                border: 2px solid rgb(209, 209, 209, 0.5);
+            }
             &-description {
                 display: none;
             }

@@ -1,4 +1,4 @@
-const cards = document.querySelectorAll('.hero__block');
+const cards = document.querySelectorAll('.hero__block')
 
 cards.forEach(card => {
     card.addEventListener('click', e => {
@@ -14,3 +14,13 @@ cards.forEach(card => {
         } 
     })
 } )
+
+
+
+const btnBurger = document.querySelector('.btn-burger')
+const menuBurger = document.querySelector('.header__wrap-mobile')
+
+btnBurger.addEventListener('click', function() {
+    btnBurger.classList.toggle('btn-burger_active')
+    menuBurger.classList.toggle('header__wrap-mobile_active')
+})
