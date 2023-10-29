@@ -59,8 +59,8 @@
 
         &__block-title {
             display: block;
-            margin: 25px 0 0;
-            @include font(700, 20px, $white);
+            margin: 15px 0 0;
+            @include font(700, 18px, $white);
         }
 
         &__block-description {
@@ -230,6 +230,13 @@
                 flex-wrap: wrap;
                 margin: 0 auto;
             }
+            &__block {
+
+                padding: 4% 0;
+            }
+            &__block-active {
+                padding: 25px 25px 25px 25px;
+            } 
             &__logo {
                 margin-bottom: 40px;
             }
@@ -245,10 +252,31 @@
     
     .main {
         .hero {
+            padding: 30px 0 200px 0;
+            &__blocks {
+                width: 420px;
+                gap: 21px;
+            }
 
+            &__block {
+                width: 126px;
+                height: 117px;
+                &-icon {
+                    width: 50px;
+                }
+                &-title {
+                    margin: 5px 0 0;
+                    font-weight: 500;
+                    font-size: 15px;
+                }
+            }
+    
+            &__block-active {
+                width: 420px;
+                height: 280px;
+                }
+            } 
     }
-}
-
 
     .chart-content {
         grid-template-columns: none;
@@ -266,10 +294,68 @@
 
 @media screen and (max-width: 576px) {
 
+    .wrapper__title {
+        font-size: 21px;
+        margin-bottom: 15px;
+    }
 
-}
+    .main {
+        .hero {
+            padding: 0 0 200px 0;
+            &__logo {
+                margin-bottom: 0;
+            }
 
-@media screen and (max-width: 320px) {
+            &__logo svg {
+                width: 280px;
+            }
 
+            &__title {
+                font-size: 18px;
+            }
 
+            &__blocks {
+                width: 300px;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            &__block {
+                &-title {
+                    margin: 5px 0 0;
+                    font-weight: 400;
+                    font-size: 15px;
+                }
+                &-active {
+                    width: 300px;
+                    height: 200px;
+                    padding: 15px
+                }               
+                &-description {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+
+    .wrapper {
+        .btn-chart {
+            margin: 30px 0 0 16%;
+        }
+    }
+
+    .swiper {
+        height: 770px;
+        margin-bottom: 25px;
+        .columns {   
+            .list {
+                &__row-item {                    
+                    @include font(400, 16px, $black);                   
+                }
+                &__title {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
 }
