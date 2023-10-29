@@ -402,6 +402,7 @@ li {
 
 #my-chart {
   width: 100% !important;
+  cursor: pointer;
 }
 
 @media (max-width: 1200px) {

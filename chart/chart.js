@@ -4,8 +4,7 @@ let myChart = new Chart(ctx, {
     data: {
         labels: ['2015', '2016', '2017', '2018', '2019', '2020'],
         datasets: [{
-            label: 'false',
-            data: [30, 40, 35, 48, 50, 52, 60],
+            data: [30, 39, 36, 48, 50, 63],
             backgroundColor: ['white'],
             borderColor: ['#E01E2E'],
             borderWidth: 4,
